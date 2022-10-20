@@ -114,23 +114,16 @@ img {
 .nav-link {
   display: flex;
   margin-left: auto;
+  align-items: center; /* не працює */
 }
-.header-link::before {
-  content: '';
-  display: inline-block;
-  height: 16px;
-  width: 16px;
+.contacts-icon {
   margin-right: 10px;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  fill: var(--secondary-font-color);
 }
-.link-envelope::before {
-  background-image: url('../images/envelope.svg');
+.contacts-icon:hover,
+.contacts-icon:focus {
+  fill: var(--accent-color);
 }
-.link-phone::before {
-  background-image: url('../images/phone.svg');
-}
-
 .contact-nav:not(:last-child) {
   margin-right: 30px;
 }
@@ -150,6 +143,7 @@ img {
   padding-bottom: 200px;
   background-color: var(--footer-font);
   background-image: url('../images/font.jpg');
+  max-width: 1600px;
 }
 .main-text {
   margin-top: 0;
@@ -300,7 +294,7 @@ img {
 }
 .team-position {
   margin: 0;
-
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
@@ -310,6 +304,17 @@ img {
 .member {
   padding: 30px 0;
   /* 70 не поміщається */
+}
+.social-list {
+  display: flex;
+}
+
+/* виправити */
+.social-logo:not(:last-child) {
+  margin-right: 10px;
+}
+.social-logo {
+  fill: #afb1b8;
 }
 
 /* PORTFOLIO */
@@ -418,6 +423,16 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-font-color);
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  /* align-items: center; */
+}
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 92px;
 }
 
 /* FOOTER */
