@@ -116,14 +116,6 @@ img {
   margin-left: auto;
   align-items: center; /* не працює */
 }
-.contacts-icon {
-  margin-right: 10px;
-  fill: var(--secondary-font-color);
-}
-.contacts-icon:hover,
-.contacts-icon:focus {
-  fill: var(--accent-color);
-}
 .contact-nav:not(:last-child) {
   margin-right: 30px;
 }
@@ -136,13 +128,24 @@ img {
 .header-link {
   color: var(--secondary-font-color);
 }
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
 
+  /* наслідує ховер батька */
+}
+/* .contacts-icon:hover,
+.contacts-icon:focus {
+  fill: var(--accent-color);
+} */
 /* MAIN SECTION (FIRST SECTION) */
 .main-section {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--footer-font);
   background-image: url('../images/font.jpg');
+  background-size: cover; /* впише зображення і обріже */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* тінь - фон */
   max-width: 1600px;
 }
 .main-text {
@@ -305,18 +308,22 @@ img {
   padding: 30px 0;
   /* 70 не поміщається */
 }
-.social-list {
-  display: flex;
-}
-
-/* виправити */
-.social-logo:not(:last-child) {
+.social-item:not(:last-child) {
   margin-right: 10px;
 }
-.social-logo {
-  fill: #afb1b8;
+.social-list {
+  display: flex;
+  justify-content: center;
 }
-
+.social-logo {
+  fill: var(--main-background-color);
+  outline: 0;
+  stroke: #afb1b8;
+}
+.social-logo:hover {
+  fill: var(--accent-color);
+  stroke: var(--main-background-color);
+}
 /* PORTFOLIO */
 /*  OUR WORKS */
 .our-works {
