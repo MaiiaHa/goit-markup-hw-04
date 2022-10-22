@@ -314,6 +314,9 @@ img {
 .social-list {
   display: flex;
   justify-content: center;
+
+  /* flex-wrap: wrap;
+  gap:10px; */
 }
 .social-logo {
   fill: var(--main-background-color);
@@ -333,6 +336,7 @@ img {
 .works {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: 0;
 }
 .works-choise {
   display: flex;
