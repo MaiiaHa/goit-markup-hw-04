@@ -9,7 +9,6 @@
   --icon-color: #afb1b8; /* колір іконок в неактивному стані */
   --logo-font: 'Raleway', sans-serif;
   --main-font: 'Roboto', sans-serif;
-  --main-font-size: 14px;
 }
 body {
   margin: 0; /* в боді автоматично є марджин, забирати його завжди */
@@ -20,6 +19,9 @@ body {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
@@ -108,7 +110,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px; /* розширюємо зону ховера і фокуса на навігації */
   font-weight: 500;
-  font-size: var(--main-font-size);
+  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
@@ -139,8 +141,11 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--footer-font);
-  background-image: url('../images/font.jpg'),
-    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-image: url('../images/font.jpg');
+
+  /* ,
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)) */
+
   background-size: cover; /* вписуєм зображення і обрізаєм */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* тінь - фон */
   max-width: 1600px;
@@ -224,7 +229,7 @@ img {
   margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: var(--main-font-size);
+  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -234,7 +239,7 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
-  font-size: var(--main-font-size);
+  font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--secondary-font-color);
