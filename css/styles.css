@@ -74,6 +74,7 @@ img {
   padding: 0;
   list-style: none; /* прибираєм крапочки списку */
 }
+/* прибираємо заголовок непотрібний */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -91,14 +92,15 @@ img {
 .header {
   border-bottom: 1px solid #ececec; /* рамка в нижній частині хедера */
 }
+.header-list {
+  align-items: center;
+}
 .nav-menu {
   margin-left: 93px;
 }
-.header-list {
-  display: flex;
-  align-items: center;
-}
-.header-nav {
+.header-list,
+.header-nav,
+.nav-link {
   display: flex;
 }
 .header-nav-list:not(:last-child) {
@@ -115,9 +117,8 @@ img {
   letter-spacing: 0.02em;
 }
 .nav-link {
-  display: flex;
   margin-left: auto;
-  align-items: center; /* не працює */
+  align-items: center;
 }
 .contact-nav:not(:last-child) {
   margin-right: 30px;
@@ -140,18 +141,15 @@ img {
 .main-section {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--footer-font);
+  /* background-color: var(--footer-font); */
+  background-image: radial-gradient(circle, rgba(49, 105, 150, 1) 0%, rgba(47, 48, 58, 1) 100%);
   background-image: url('../images/font.jpg');
-
-  /* ,
-    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)) */
-
   background-size: cover; /* вписуєм зображення і обрізаєм */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* тінь - фон */
   max-width: 1600px;
 }
 .main-text {
-  margin-top: 0;
+  margin-top: 0; /* скидаю марджин */
   margin-bottom: 30px;
   text-align: center;
   width: 696px; /* ширина тексту основного */
@@ -165,10 +163,10 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-background-color);
-  /* скидаю марджин */
 }
 .main-btn {
   /* inherit добавила*/
+  display: block;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -179,7 +177,6 @@ img {
   letter-spacing: 0.06em;
   color: var(--main-background-color);
   background: var(--accent-color);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   border-radius: 4px;
   padding: 10px 32px; /* відступи тексту на кнопці */
   text-align: center;
@@ -192,6 +189,8 @@ img {
 .main-btn:hover,
 .main-btn:focus {
   background: #188ce8;
+  /* background-image: radial-gradient(circle, rgba(33, 150, 243, 1) 0%, rgba(175, 177, 184, 1) 100%); */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /* OUR BENEFITS SECTION */
 .benefits {
@@ -238,7 +237,6 @@ img {
 .benefits-text {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -346,8 +344,7 @@ img {
 .works-choise {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
-  /* padding-top: 94px; */
+  margin-bottom: 50px; /* padding-top: 94px; */
 }
 .choice-btn:not(:last-child) {
   margin-right: 8px;
@@ -356,8 +353,7 @@ img {
   /* margin-top: 0; */
   display: block;
   padding: 6px 25px; /* відступи тексту на кнопці */
-  /* min-width: 73px; */
-  font-family: inherit;
+  font-family: inherit; /* min-width: 73px; */
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
@@ -373,13 +369,11 @@ img {
 .works-btn:focus {
   background: var(--accent-color);
   color: var(--main-background-color);
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .works-card {
-  /* картки переносить в наступні строки */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* картки переносимо в наступні строки */
 }
 .works-list {
   margin-top: 0;
@@ -388,10 +382,6 @@ img {
   /* max-width: calc((100% - 30px * 2) / 3); ширина flex-елемента - картка - 370px */
   flex-basis: calc((100% - 30px * 2) / 3);
 }
-/* останній в строчці не має правого марджина */
-/* .works-list:not(:last-child) {
-  margin-right: 30px;
-} */
 .works-list:nth-child(3n) {
   margin-right: 0;
 }
@@ -417,7 +407,6 @@ img {
 }
 .works-item {
   margin-top: 0;
-  /* margin-bottom: 20px; */
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
@@ -436,7 +425,6 @@ img {
   align-items: center;
   justify-content: center;
   gap: 30px;
-
   border-color: #afb1b8;
 }
 
@@ -468,7 +456,7 @@ img {
   font-style: normal;
 }
 .address-link {
-  font-size: 14px; /* font-weight: 400; */
+  font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--main-background-color);
